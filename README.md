@@ -2,6 +2,8 @@
 
 > A vue.js component dev project
 
+[DEMO](https://savoygu.github.io/i-vue-star/)
+
 ## Build Setup
 
 ``` bash
