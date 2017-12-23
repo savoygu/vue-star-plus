@@ -81,13 +81,20 @@
       <template slot="description">
         会用到 font-awesome 和 animate.css 库。
       </template>
+      <div class="i-star__operate">
+        <span>调整间隔时间：{{duration}}ms</span>
+        <button @click="adjustmentSpeed(200)">下调-200ms</button>
+        <button @click="adjustmentSpeed(-200)">上调+200ms</button>
+      </div>
       <template slot="source">
-        <div class="vd-demo__block vd-demo__block-1" style="height: 200px;" v-for="(item, index) in data">
+        <div class="vd-demo__block vd-demo__block-1" style="height: 200px;" v-for="(item, index) in data" :key="index">
           <span class="vd-demo__demonstration">fa-{{item.font}} 和 {{item.animated}}</span>
           <div class="i-star__wrap">
             {{item.model}}
-            <i-vue-star v-model="item.model" :color="item.color" class="i-star__component" :animate="'animated ' + item.animated">
-              <i slot="icon" class="fa fa-2x" :class="'fa-'+item.font"></i>
+            <i-vue-star ref="star" v-model="item.model" class="i-star__component" :animate="'animated ' + item.animated">
+              <i slot="icon" class="fa fa-2x" 
+              :class="'fa-'+item.font"
+              :style="{ color: item.model ? item.color : '' }"></i>
             </i-vue-star>
           </div>
         </div>
@@ -102,7 +109,7 @@
   </div>
 </template>
 
-<script type="es6">
+<script>
   import { sourcecode, sourcecode2, sourcecode3 } from './template'
 
   export default {
@@ -170,9 +177,54 @@
         ],
         sourcecode,
         sourcecode2,
-        sourcecode3
+        sourcecode3,
+        current: -1,
+        last: -1,
+        reverse: false,
+        duration: 1000,
+        interval: null
       }
     },
+
+    methods: {
+      switchActiveStatus () {
+        if (!this.reverse){
+          this.last = this.current++
+          if (this.current === this.data.length - 1) {
+            this.reverse = true
+          }
+        } else {
+          this.last = this.current--
+          if (this.current === 0) {
+            this.reverse = false
+          }
+        }
+        this.data[this.current].model = !this.data[this.current].model
+        if (this.last !== -1) {
+          this.data[this.last].model = !this.data[this.last].model
+        }
+      },
+
+      adjustmentSpeed (speed) {
+        clearInterval(this.interval)
+        this.duration = this.duration - speed
+        if (this.duration < 200) {
+          this.duration = 200
+        } else if (this.duration > 2000) {
+          this.duration = 2000
+        }
+        console.log(this.duration)
+        this.interval = setInterval(_ => {
+          this.switchActiveStatus()
+        }, this.duration)
+      }
+    },
+
+    mounted () {
+      this.interval = setInterval(_ => {
+        this.switchActiveStatus()
+      }, this.duration)
+    }
   }
 </script>
 
@@ -210,6 +262,27 @@
 
     &.is-active {
       background-image: url("./images/l_rank_star2.png")
+    }
+  }
+
+  .i-star__operate {
+    padding-bottom: 20px;
+    font-size: 16px;
+    color: #5e6d82;
+    line-height: 1.5em;
+
+    span {
+      display: inline-block;
+      width: 200px;
+    }
+
+    button {
+      line-height: 28px;
+      color: white;
+      background-color: plum;
+      border: 1px solid purple;
+      border-radius: 3px;
+      cursor: pointer;
     }
   }
 </style>
