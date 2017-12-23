@@ -12,11 +12,12 @@ export const sourcecode = `<template>
   <span class="vd-demo__demonstration">指定默认和激活颜色</span>
   <div class="i-star__wrap">
     {{active2}}
-    <i-vue-star v-model="active2" class="i-star__component">
+    <i-vue-star v-model="active2" class="i-star__component" @change="active2?++count:--count">
       <span class="i-star__text" slot="icon"
         :style="{
-          color: (active2 ? 'rgb(247, 186, 42)' : '#bfcbd9')
-        }">❤</span>
+          color: (active2 ? 'rgb(247, 186, 42)' : '#bfcbd9'),
+          'font-size': '24px'
+        }">❤ {{count}}</span>
     </i-vue-star>
   </div>
   </div>
@@ -174,7 +175,52 @@ export const sourcecode3 = `<template>
             model: false
           }
         ]
+        current: -1,
+        last: -1,
+        reverse: false,
+        duration: 1000,
+        interval: null,
       }
+    },
+
+    methods: {
+      switchActiveStatus () {
+        if (!this.reverse){
+          this.last = this.current++
+          if (this.current === this.data.length - 1) {
+            this.reverse = true
+          }
+        } else {
+          this.last = this.current--
+          if (this.current === 0) {
+            this.reverse = false
+          }
+        }
+        this.data[this.current].model = !this.data[this.current].model
+        if (this.last !== -1) {
+          this.data[this.last].model = !this.data[this.last].model
+        }
+      },
+
+      adjustmentSpeed (speed) {
+        clearInterval(this.interval)
+        this.duration = this.duration - speed
+        if (this.duration < 200) {
+          this.duration = 200
+        } else if (this.duration > 2000) {
+          this.duration = 2000
+        }
+        console.log(this.duration)
+        this.interval = setInterval(_ => {
+          this.switchActiveStatus()
+        }, this.duration)
+      }
+    },
+
+    mounted () {
+      this.interval = setInterval(_ => {
+        this.switchActiveStatus()
+      }, this.duration)
     }
   }
 </script>`
