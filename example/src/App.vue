@@ -27,17 +27,18 @@
           <span class="vd-demo__demonstration">指定默认和激活颜色</span>
           <div class="i-star__wrap">
             {{active2}}
-            <i-vue-star v-model="active2" class="i-star__component">
+            <i-vue-star v-model="active2" class="i-star__component" @change="active2?++count:--count">
               <span class="i-star__text" slot="icon"
                 :style="{
-                  color: (active2 ? 'rgb(247, 186, 42)' : '#bfcbd9')
-                }">❤</span>
+                  color: (active2 ? 'rgb(247, 186, 42)' : '#bfcbd9'),
+                  'font-size': '24px'
+                }">❤ {{count}}</span>
             </i-vue-star>
           </div>
         </div>
       </template>
       <template slot="explanation">
-        可以通过 `v-model` 的值进行设置默认和激活颜色。
+        可以通过 `v-model` 的值进行设置默认和激活颜色。change 事件可以在改变状态之后进行 `+1` 或 `-1` 操作
       </template>
     </demonstration>
     <demonstration
@@ -182,7 +183,8 @@
         last: -1,
         reverse: false,
         duration: 1000,
-        interval: null
+        interval: null,
+        count: 100
       }
     },
 
@@ -243,20 +245,20 @@
   }
 
   .i-star__text {
-    font-size: 50px;
+    font-size: 36px;
     user-select: none;
   }
 
   .i-star__picture {
     display: block;
-    width: 50px;
+    width: 36px;
     height: auto;
   }
 
   .i-star__bgc {
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 36px;
+    height: 36px;
     background: url("./images/l_rank_unstar2.png") no-repeat;
     background-size: contain;
 
