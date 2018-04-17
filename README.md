@@ -17,6 +17,19 @@
 - 可以把图标替换为图片
 - 支持点赞完成的后续操作
 
+## 安装
+
+```javascript
+npm i vue-star-plus --save
+```
+
+## 使用
+
+```javascript
+import VueStarPlus from 'vue-star-plus'
+Vue.component('vue-star-plus', VueStarPlus)
+```
+
 ## Build Setup
 
 ``` bash
