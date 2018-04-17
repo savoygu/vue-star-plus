@@ -1,8 +1,8 @@
-# i-vue-star
+# vue-star-plus
 
 > A vue.js component dev project
 
-[DEMO](https://savoygu.github.io/i-vue-star/)
+[DEMO](https://savoygu.github.io/vue-star-plus/)
 
 ## VS
 

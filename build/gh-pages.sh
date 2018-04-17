@@ -4,4 +4,4 @@ cd gh-pages
 git init
 git add -A
 git commit -m 'update gh-pages'
-git push -f git@github.com:savoygu/i-vue-star.git master:gh-pages
+git push -f git@github.com:savoygu/vue-star-plus.git master:gh-pages

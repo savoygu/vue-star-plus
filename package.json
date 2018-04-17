@@ -1,9 +1,9 @@
 {
-  "name": "template",
-  "description": "A vue.js component dev project",
+  "name": "vue-star-plus",
+  "description": "Upgraded version of vue-star component",
   "version": "1.0.0",
-  "author": "savoygu <savoygu@163.com>",
-  "main": "lib/i-vue-star.js",
+  "author": "savoygu",
+  "main": "lib/vue-star-plus.js",
   "files": [
     "lib",
     "build",
@@ -19,18 +19,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:savoygu <savoygu@163.com>/i-vue-star.git"
+    "url": "git@github.com:savoygu/vue-star-plus.git"
   },
   "keywords": [
     "vue",
-    "i-vue-star",
+    "vue-star",
+    "vue-star-plus",
     "components"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/savoygu <savoygu@163.com>/i-vue-star/issues"
+    "url": "https://github.com/savoygu/vue-star-plus/issues"
   },
-  "unpkg": "lib/i-vue-star.js",
+  "unpkg": "lib/vue-star-plus.js",
   "dependencies": {
     "vue": "^2.3.3"
   },
