@@ -31,6 +31,7 @@ npm i vue-star-plus --save
 
 ```javascript
 import VueStarPlus from 'vue-star-plus'
+import 'vue-star-plus/vue-star-plus.css'
 Vue.component('vue-star-plus', VueStarPlus)
 ```
 
