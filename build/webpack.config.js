@@ -6,8 +6,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, '..', './lib'),
-    filename: 'i-vue-star.js',
-    library: 'i-vue-star',
+    filename: 'vue-star-plus.js',
+    library: 'vue-star-plus',
     libraryTarget: 'umd'
   },
   externals: {
@@ -84,7 +84,7 @@ module.exports = {
       }
     }),
     new ExtractTextPlugin({
-      filename: '../lib/i-vue-star.css',
+      filename: '../lib/vue-star-plus.css',
       allChunks: true
     })
   ]

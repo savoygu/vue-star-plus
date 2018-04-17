@@ -3,22 +3,22 @@ export const sourcecode = `<template>
   <span class="vd-demo__demonstration">指定激活颜色</span>
   <div class="i-star__wrap">
     {{active}}
-    <i-vue-star v-model="active" color="#ff0000" class="i-star__component">
+    <vue-star-plus v-model="active" color="#ff0000" class="i-star__component">
       <span slot="icon" class="i-star__text">❤</span>
-    </i-vue-star>
+    </vue-star-plus>
   </div>
   </div>
   <div class="vd-demo__block vd-demo__block-1" style="height: 200px;">
   <span class="vd-demo__demonstration">指定默认和激活颜色</span>
   <div class="i-star__wrap">
     {{active2}}
-    <i-vue-star v-model="active2" class="i-star__component" @change="active2?++count:--count">
+    <vue-star-plus v-model="active2" class="i-star__component" @change="active2?++count:--count">
       <span class="i-star__text" slot="icon"
         :style="{
           color: (active2 ? 'rgb(247, 186, 42)' : '#bfcbd9'),
           'font-size': '24px'
         }">❤ {{count}}</span>
-    </i-vue-star>
+    </vue-star-plus>
   </div>
   </div>
 </template>
@@ -55,19 +55,19 @@ export const sourcecode2 = `<template>
   <span class="vd-demo__demonstration">切换点赞图片</span>
   <div class="i-star__wrap">
     {{active3}}
-    <i-vue-star v-model="active3" color="#ff0000" class="i-star__component">
+    <vue-star-plus v-model="active3" color="#ff0000" class="i-star__component">
       <img class="i-star__picture" slot="icon" :src="require(active3 ? './images/l_rank_star2.png' : './images/l_rank_unstar2.png')">
-    </i-vue-star>
+    </vue-star-plus>
   </div>
 </div>
 <div class="vd-demo__block vd-demo__block-1" style="height: 200px;">
   <span class="vd-demo__demonstration">切换点赞背景</span>
   <div class="i-star__wrap">
     {{active4}}
-    <i-vue-star v-model="active4" class="i-star__component">
+    <vue-star-plus v-model="active4" class="i-star__component">
       <span class="i-star__bgc" slot="icon"
         :class="{'is-active': active4}"></span>
-    </i-vue-star>
+    </vue-star-plus>
   </div>
 </div>
 </template>
@@ -108,9 +108,9 @@ export const sourcecode3 = `<template>
   <span class="vd-demo__demonstration">fa-{{item.font}} 和 {{item.animated}}</span>
   <div class="i-star__wrap">
     {{item.model}}
-    <i-vue-star v-model="item.model" :color="item.color" class="i-star__component" :animate="'animated ' + item.animated">
+    <vue-star-plus v-model="item.model" :color="item.color" class="i-star__component" :animate="'animated ' + item.animated">
       <i slot="icon" class="fa fa-2x" :class="'fa-'+item.font"></i>
-    </i-vue-star>
+    </vue-star-plus>
   </div>
 </div>
 </template>
