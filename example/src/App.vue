@@ -78,7 +78,8 @@
         title="更多示例"
         anchor="demo-code-title"
         :multiple="true"
-        :highlight="sourcecode3">
+        :highlight="sourcecode3"
+        class="i-star__more">
       <template slot="description">
         会用到 font-awesome 和 animate.css 库。
       </template>
@@ -285,6 +286,20 @@
       border: 1px solid purple;
       border-radius: 3px;
       cursor: pointer;
+    }
+  }
+
+  .i-star__more {
+    .vd-demo__block {
+      &.vd-demo__block-1 {
+        width: 33.3%;
+        &:nth-child(2n) {
+          border-right: 1px solid #eff2f6;
+        }
+        &:nth-child(3n) {
+          border-right: none;
+        }
+      }
     }
   }
 </style>
