@@ -1,7 +1,7 @@
 <template>
   <div class="VueStar"> 
     <div class="VueStar__ground">
-      <div class="VueStar__icon" @click="toggle" :class="AnimateClass" :style='{ color: ColorValue }'>
+      <div class="VueStar__icon" @click="toggle" :class="animateClass" :style='{ color: colorValue }'>
         <slot name="icon"></slot>
       </div>
       <div class="VueStar__decoration" :class="{ 'VueStar__decoration--active': active }"></div>
@@ -22,7 +22,6 @@ export default {
 
   methods: {
     toggle () {
-      // this.active = !this.active
       this.toggleAnimate = !this.toggleAnimate
       this.toggleColor = !this.toggleColor
       this.$emit('input', !this.active)
@@ -41,28 +40,23 @@ export default {
   watch: {
     value (newVal, oldVal) {
       if (this.active === newVal) return
+      this.toggle()
       this.active = newVal
     }
   },
 
   computed: {
-    AnimateClass () {
+    animateClass () {
       return this.toggleAnimate ? this.animate : ''
     },
-    ColorValue () {
+    colorValue () {
       return this.toggleColor ? this.color : ''
     }
   },
 
   mounted () {
-    if (this.color) {
-      if (isColors(this.color)) {
-        return
-      } else {
-        console.error('this color must be hexcolor or rgbcolor  ---VueStar')
-      }
-    } else {
-      return
+    if (this.color && !isColors(this.color)) {
+      console.error('this color prop must be hex or rgb pattern  ---VueStarPlus')
     }
   }
 }
