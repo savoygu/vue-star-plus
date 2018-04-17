@@ -1,8 +1,12 @@
 # vue-star-plus
 
-> A vue.js component dev project
+> 升级版 [vue-star](https://github.com/OYsun/VueStar)
 
 [DEMO](https://savoygu.github.io/vue-star-plus/)
+
+## 演示
+
+![vue-star-plus](vue-star-plus.gif)
 
 ## VS
 
