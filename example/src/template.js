@@ -1,14 +1,14 @@
-export const sourcecode = `<template>
-  <div class="vd-demo__block vd-demo__block-1" style="height: 200px;">
+export const sourcecode = `<template slot="source">
+<div class="vd-demo__block vd-demo__block-1" style="height: 200px;">
   <span class="vd-demo__demonstration">指定激活颜色</span>
   <div class="i-star__wrap">
     {{active}}
     <vue-star-plus v-model="active" color="#ff0000" class="i-star__component">
-      <span slot="icon" class="i-star__text">❤</span>
+      <span slot="icon" class="i-star__text">{{ active ? '💖' : '❤' }}</span>
     </vue-star-plus>
   </div>
-  </div>
-  <div class="vd-demo__block vd-demo__block-1" style="height: 200px;">
+</div>
+<div class="vd-demo__block vd-demo__block-1" style="height: 200px;">
   <span class="vd-demo__demonstration">指定默认和激活颜色</span>
   <div class="i-star__wrap">
     {{active2}}
@@ -17,10 +17,10 @@ export const sourcecode = `<template>
         :style="{
           color: (active2 ? 'rgb(247, 186, 42)' : '#bfcbd9'),
           'font-size': '24px'
-        }">❤ {{count}}</span>
+        }">{{ active2 ? '💘' : '❤'}} {{count}}</span>
     </vue-star-plus>
   </div>
-  </div>
+</div>
 </template>
 
 <script>
@@ -40,7 +40,7 @@ export const sourcecode = `<template>
 }
 
 .i-star__component {
-  left: 50%; 
+  left: 50%;
   margin-left: -50px;
 }
 

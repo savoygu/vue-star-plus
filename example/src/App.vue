@@ -19,7 +19,7 @@
           <div class="i-star__wrap">
             {{active}}
             <vue-star-plus v-model="active" color="#ff0000" class="i-star__component">
-              <span slot="icon" class="i-star__text">❤</span>
+              <span slot="icon" class="i-star__text">{{ active ? '💖' : '❤' }}</span>
             </vue-star-plus>
           </div>
         </div>
@@ -32,7 +32,7 @@
                 :style="{
                   color: (active2 ? 'rgb(247, 186, 42)' : '#bfcbd9'),
                   'font-size': '24px'
-                }">❤ {{count}}</span>
+                }">{{ active2 ? '💘' : '❤'}} {{count}}</span>
             </vue-star-plus>
           </div>
         </div>
@@ -94,7 +94,7 @@
           <div class="i-star__wrap">
             {{item.model}}
             <vue-star-plus ref="star" v-model="item.model" class="i-star__component" :animate="'animated ' + item.animated">
-              <i slot="icon" class="fa fa-2x" 
+              <i slot="icon" class="fa fa-2x"
               :class="'fa-'+item.font"
               :style="{ color: item.model ? item.color : '' }"></i>
             </vue-star-plus>
@@ -241,7 +241,7 @@
   }
 
   .i-star__component {
-    left: 50%; 
+    left: 50%;
     margin-left: -50px;
   }
 
