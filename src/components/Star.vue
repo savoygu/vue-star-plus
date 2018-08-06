@@ -1,5 +1,5 @@
 <template>
-  <div class="VueStar"> 
+  <div class="VueStar">
     <div class="VueStar__ground">
       <div class="VueStar__icon" @click="toggle" :class="animateClass" :style='{ color: colorValue }'>
         <slot name="icon"></slot>
@@ -40,7 +40,6 @@ export default {
   watch: {
     value (newVal, oldVal) {
       if (this.active === newVal) return
-      this.toggle()
       this.active = newVal
     }
   },
