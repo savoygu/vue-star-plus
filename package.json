@@ -1,7 +1,7 @@
 {
   "name": "vue-star-plus",
   "description": "Upgraded version of vue-star component",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "savoygu",
   "main": "lib/vue-star-plus.js",
   "files": [
