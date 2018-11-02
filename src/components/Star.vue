@@ -41,6 +41,8 @@ export default {
     value (newVal, oldVal) {
       if (this.active === newVal) return
       this.active = newVal
+      this.toggleAnimate = !this.toggleAnimate
+      this.toggleColor = !this.toggleColor
     }
   },
 
