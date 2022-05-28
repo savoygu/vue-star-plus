@@ -19,6 +19,10 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7
       - name: Configure committer
         run: |
           git config user.name "GitHub Actions Bot"
