@@ -1,6 +1,8 @@
 {
   "name": "vue-star-plus",
   "version": "3.0.0",
+  "description": "Plus version of vue-star component",
+  "author": "savoygu",
   "files": [
     "dist",
     "types"
@@ -22,6 +24,18 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:savoygu/vue-star-plus.git"
+  },
+  "keywords": [
+    "vue-star",
+    "vue-star-plus"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/savoygu/vue-star-plus/issues"
   },
   "dependencies": {
     "vue": "^3.2.25"
