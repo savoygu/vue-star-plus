@@ -23,6 +23,7 @@ jobs:
         uses: pnpm/action-setup@v2.2.2
         with:
           version: 7
+          run_install: true
       - name: Configure committer
         run: |
           git config user.name "GitHub Actions Bot"
@@ -33,7 +34,7 @@ jobs:
           pnpm app:build
       - name: publish
         run: |
-          npm publish
+          pnpm publish -r --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       - name: Read version
