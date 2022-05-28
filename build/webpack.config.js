@@ -84,7 +84,7 @@ module.exports = {
       }
     }),
     new ExtractTextPlugin({
-      filename: '../lib/vue-star-plus.css',
+      filename: '../lib/style.css',
       allChunks: true
     })
   ]

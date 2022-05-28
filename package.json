@@ -4,6 +4,16 @@
   "version": "1.2.0",
   "author": "savoygu",
   "main": "lib/vue-star-plus.js",
+  "exports": {
+    ".": {
+      "import": "./lib/vue-star-plus.js",
+      "require": "./lib/vue-star-plus.js"
+    },
+    "./style.css": {
+      "import": "./lib/style.css",
+      "require": "./lib/style.css"
+    }
+  },
   "files": [
     "lib",
     "build",

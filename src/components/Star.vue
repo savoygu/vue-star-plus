@@ -10,52 +10,50 @@
 </template>
 
 <script>
-import { isColors } from '../uitls/colorRE.js'
+import { isColors } from '../utils/colorRE.js'
+
 export default {
-  name: 'star',
+  name: 'VueStarPlus',
 
   props: {
     value: Boolean,
     animate: String,
-    color: String
+    color: {
+      type: String,
+      validator: isColors
+    }
   },
 
   methods: {
-    toggle () {
-      this.toggleAnimate = !this.toggleAnimate
-      this.toggleColor = !this.toggleColor
+    toggle() {
       this.$emit('input', !this.active)
       this.$emit('change', this)
     }
   },
 
-  data () {
+  data() {
     return {
       active: this.value,
-      toggleAnimate: false,
-      toggleColor: false
     }
   },
 
   watch: {
-    value (newVal, oldVal) {
+    value(newVal, oldVal) {
       if (this.active === newVal) return
       this.active = newVal
-      this.toggleAnimate = !this.toggleAnimate
-      this.toggleColor = !this.toggleColor
     }
   },
 
   computed: {
-    animateClass () {
-      return this.toggleAnimate ? this.animate : ''
+    animateClass() {
+      return this.active ? this.animate : ''
     },
-    colorValue () {
-      return this.toggleColor ? this.color : ''
+    colorValue() {
+      return this.active ? this.color : ''
     }
   },
 
-  mounted () {
+  mounted() {
     if (this.color && !isColors(this.color)) {
       console.error('this color prop must be hex or rgb pattern  ---VueStarPlus')
     }
@@ -64,5 +62,5 @@ export default {
 </script>
 
 <style lang="less">
- @import '../style/main.less';
+@import '../style/main.less';
 </style>
