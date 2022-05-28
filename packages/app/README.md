@@ -1,16 +1,44 @@
-# Vue 3 + TypeScript + Vite
+# vue-star-plus
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+> 升级版 [vue-star](https://github.com/OYsun/VueStar)
 
-## Recommended IDE Setup
+[DEMO](https://savoygu.github.io/vue-star-plus/)
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+| 功能 | vue-star | vue-star-plus  |
+| --- | --- | --- |
+| 图标 | ✅ | ✅ |
+| 动画 | ✅ | ✅ |
+| 默认激活 | ❌ | ✅ |
+| 图片 | ❌ | ✅ |
 
-## Type Support For `.vue` Imports in TS
+## 安装
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
+### Vue3
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+```javascript
+npm i vue-star-plus --save
+```
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+### Vue2
+
+```javascript
+npm i vue-star-plus@1.2.0 --save
+```
+
+## 使用方式
+
+### Vue3
+
+```javascript
+import VueStarPlus from 'vue-star-plus'
+import 'vue-star-plus/style.css'
+Vue.component('VueStarPlus', VueStarPlus)
+```
+
+### Vue2
+
+```javascript
+import VueStarPlus from 'vue-star-plus'
+import 'vue-star-plus/vue-star-plus.css'
+Vue.component('VueStarPlus', VueStarPlus)
+```
