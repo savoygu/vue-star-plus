@@ -22,23 +22,15 @@ npm i vue-star-plus --save
 ### Vue2
 
 ```javascript
-npm i vue-star-plus@1.2.0 --save
+npm i vue-star-plus@2 --save
 ```
 
 ## 使用方式
 
-### Vue3
+### Vue3 / Vue2
 
 ```javascript
 import VueStarPlus from 'vue-star-plus'
 import 'vue-star-plus/style.css'
-Vue.component('VueStarPlus', VueStarPlus)
-```
-
-### Vue2
-
-```javascript
-import VueStarPlus from 'vue-star-plus'
-import 'vue-star-plus/vue-star-plus.css'
 Vue.component('VueStarPlus', VueStarPlus)
 ```
