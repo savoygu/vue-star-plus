@@ -4,7 +4,9 @@
   "description": "Plus version of vue-star component",
   "author": "savoygu",
   "scripts": {
-    "predeploy": "pnpm --filter 'docs' build",
+    "app:build": "pnpm --filter 'vue-star-plus' build",
+    "docs:build": "pnpm --filter 'docs' build",
+    "predeploy": "pnpm docs:build",
     "deploy": "gh-pages -d packages/docs/dist"
   },
   "repository": {
