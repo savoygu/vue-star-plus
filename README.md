@@ -24,32 +24,13 @@
 ## 安装
 
 ```javascript
-npm i vue-star-plus --save
+npm i vue-star-plus@2 --save
 ```
 
 ## 使用
 
 ```javascript
 import VueStarPlus from 'vue-star-plus'
-import 'vue-star-plus/vue-star-plus.css'
+import 'vue-star-plus/style.css'
 Vue.component('vue-star-plus', VueStarPlus)
-```
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run demo:dev
-
-# build for demo with minification
-npm run demo:build
-
-# build for gh-pages with minification
-npm run demo:prepublish
-
-# build for production with minification
-npm run build
 ```
