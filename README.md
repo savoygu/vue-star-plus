@@ -1,3 +1,12 @@
+<p>
+  <a href="https://www.npmjs.com/package/vue-star-plus" target="_blank">
+    <img alt="Version" src="https://img.shields.io/npm/v/vue-star-plus.svg">
+  </a>
+  <a href="https://www.npmjs.com/package/vue-star-plus" target="_blank">
+    <img alt="Version" src="https://img.shields.io/npm/dt/vue-star-plus">
+  </a>
+</p>
+
 # vue-star-plus
 
 > 升级版 [vue-star](https://github.com/OYsun/VueStar)
