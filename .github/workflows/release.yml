@@ -1,4 +1,4 @@
-name: Preview Action
+name: Release npm
 on:
   pull_request:
     branches:
@@ -8,8 +8,8 @@ on:
       - main
 
 jobs:
-  preview:
-    name: Preview
+  release:
+    name: Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -32,9 +32,23 @@ jobs:
         run: |
           pnpm install
           pnpm app:build
-          pnpm docs:build
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.3.3
+      - name: publish
+        run: |
+          pnpm publish -r --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: Read version
+        id: version
+        uses: ashley-taylor/read-json-property-action@v1.0
         with:
-          branch: gh-pages
-          folder: packages/docs/dist
+          path: ./packages/app/package.json
+          property: version
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{secrets.ACCESS_TOKEN}}
+        with:
+          tag_name: v${{steps.version.outputs.value}}
+          body: body_v${{steps.version.outputs.value}}
+          draft: false
+          prerelease: false
