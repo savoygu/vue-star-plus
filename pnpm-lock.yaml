@@ -13,8 +13,7 @@ importers:
       '@vitejs/plugin-vue': ^2.3.3
       '@vitejs/plugin-vue-jsx': ^1.3.10
       sass: ^1.52.1
-      sass-bem: ^2.6.5
-      sass-config: ^1.1.2
+      sass-bem-next: ^3.1.0
       typescript: ^4.5.4
       vite: ^2.9.9
       vite-plugin-dts: ^1.2.0
@@ -26,8 +25,7 @@ importers:
       '@vitejs/plugin-vue': 2.3.3_vite@2.9.9+vue@3.2.36
       '@vitejs/plugin-vue-jsx': 1.3.10
       sass: 1.52.1
-      sass-bem: 2.6.5
-      sass-config: 1.1.2
+      sass-bem-next: 3.1.0
       typescript: 4.7.2
       vite: 2.9.9_sass@1.52.1
       vite-plugin-dts: 1.2.0_vite@2.9.9
@@ -2089,14 +2087,14 @@ packages:
     resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==}
     dev: true
 
-  /sass-bem/2.6.5:
-    resolution: {integrity: sha512-3KQt19LSNRJPr+V5ZGPLQuMhXVG+UtaUZt2UJvZRfPd0CRRgogUlapxfsxwSbcK/oKhgY0Qe0MYVksPFeFQwew==}
+  /sass-bem-next/3.1.0:
+    resolution: {integrity: sha512-4iCl2fS6HipoChePjohIS2Ltc+DhC4eX7bmJ5/AMKQjenGGsTsCHRbcumtP83Pv1LtJL9y7XGsyeb4MtIBv5Ng==}
     dependencies:
       sass-config: 1.1.2
     dev: true
 
   /sass-config/1.1.2:
-    resolution: {integrity: sha512-54dIJYkmsOq//l8YxP25BxdY0L2jgo3pNHmoEXxeP5VzFOgYmS4Uv6C1j504um8UEmSrp6hNNmuGxK93NNA5Mw==}
+    resolution: {integrity: sha1-kwN7TNBnyqUAOrlL/Nki7yuSp1k=}
     dev: true
 
   /sass/1.52.1:
