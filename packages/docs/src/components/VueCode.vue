@@ -37,37 +37,38 @@ onMounted(() => {
   </div>
 </template>
 
-<style scoped>
-.vue-code {
+<style lang="scss" scoped>
+@include b(vue-code) {
   background-color: #fff;
   border: 1px solid #ccc;
   overflow: hidden;
   border-radius: 4px;
   box-shadow: 4px 4px 4px rgb(0 0 0 / 10%);
-}
 
-.vue-code__slot {
-  width: 100%;
-  overflow: auto;
-  padding: 10px;
-}
+  @include e(slot) {
+    width: 100%;
+    overflow: auto;
+    padding: 10px;
+  }
 
-.vue-code__btn {
-  text-align: center;
-  padding: 10px;
-  color: #666;
-  margin-top: -1px;
-  border-top: 1px solid #ccc;
-}
+  @include e(btn) {
+    text-align: center;
+    padding: 10px;
+    color: #666;
+    margin-top: -1px;
+    border-top: 1px solid #ccc;
+    cursor: pointer;
+  }
 
-.vue-code__wrap {
-  border-top: 1px solid #ccc;
-  overflow: hidden;
-  height: v-bind(wrapHeight);
-  transition: height 500ms;
-}
+  @include e(wrap) {
+    border-top: 1px solid #ccc;
+    overflow: hidden;
+    height: v-bind(wrapHeight);
+    transition: height 500ms;
+  }
 
-.vue-code__source {
-  padding: 10px;
+  @include e(source) {
+    padding: 10px;
+  }
 }
 </style>

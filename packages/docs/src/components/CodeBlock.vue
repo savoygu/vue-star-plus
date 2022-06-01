@@ -13,8 +13,8 @@ defineProps({
 })
 </script>
 
-<style scoped>
-.code-block {
+<style lang="scss" scoped>
+@include b(code-block) {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -23,11 +23,10 @@ defineProps({
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   box-sizing: border-box;
-}
 
-.code-block:nth-child(3n),
-.code-block:last-child {
-  border-right: none;
+  @include p('&:nth-child(3n)', '&:last-child') {
+    border-right: none;
+  }
 }
 
 .code-desc {
@@ -39,14 +38,14 @@ defineProps({
 
 .code-info {
   position: relative;
-}
 
-.code-info ::v-deep(.vue-star-plus) {
-  left: 50%;
-  margin-left: -50px;
-}
+  ::v-deep(.vue-star-plus) {
+    left: 50%;
+    margin-left: -50px;
+  }
 
-.code-info ::v-deep(.vue-star-plus__icon) {
-  font-size: 24px;
+  ::v-deep(.vue-star-plus__icon) {
+    font-size: 24px;
+  }
 }
 </style>

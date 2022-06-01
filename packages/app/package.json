@@ -18,6 +18,10 @@
     "./style.css": {
       "import": "./dist/style.css",
       "require": "./dist/style.css"
+    },
+    "./package.json": {
+      "import": "./package.json",
+      "require": "./package.json"
     }
   },
   "scripts": {

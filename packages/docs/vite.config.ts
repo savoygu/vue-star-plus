@@ -10,6 +10,13 @@ export default defineConfig(({ mode }) => {
 
   return {
     base: env.NODE_ENV === 'production' ? '/vue-star-plus' : '/',
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `@import "sass-bem-next/_bem.scss";`
+        }
+      },
+    },
     plugins: [
       vue({
         include: [/\.vue$/, /\.md$/]
