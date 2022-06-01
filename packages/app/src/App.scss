@@ -16,6 +16,7 @@
 
   @include e(icon) {
     z-index: 888; /*❤今年888大发*/
+    cursor: pointer;
   }
 
   @include e(decoration) {
