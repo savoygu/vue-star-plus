@@ -35,6 +35,7 @@ importers:
     specifiers:
       '@vitejs/plugin-vue': ^2.3.3
       markdown-it-shiki: ^0.5.1
+      sass-bem-next: ^3.1.0
       typescript: ^4.5.4
       vite: ^2.9.9
       vite-plugin-md: ^0.13.1
@@ -48,6 +49,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-vue': 2.3.3_vite@2.9.9+vue@3.2.36
       markdown-it-shiki: 0.5.1
+      sass-bem-next: 3.1.0
       typescript: 4.7.2
       vite: 2.9.9
       vite-plugin-md: 0.13.1_vite@2.9.9
@@ -573,7 +575,7 @@ packages:
       vite: ^2.5.10
       vue: ^3.2.25
     dependencies:
-      vite: 2.9.9_sass@1.52.1
+      vite: 2.9.9
       vue: 3.2.36
     dev: true
 
@@ -2094,7 +2096,7 @@ packages:
     dev: true
 
   /sass-config/1.1.2:
-    resolution: {integrity: sha1-kwN7TNBnyqUAOrlL/Nki7yuSp1k=}
+    resolution: {integrity: sha512-54dIJYkmsOq//l8YxP25BxdY0L2jgo3pNHmoEXxeP5VzFOgYmS4Uv6C1j504um8UEmSrp6hNNmuGxK93NNA5Mw==}
     dev: true
 
   /sass/1.52.1:
