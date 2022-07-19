@@ -9,37 +9,48 @@
 
 # vue-star-plus
 
-> 升级版 [vue-star](https://github.com/OYsun/VueStar)
+| Feature        | [vue-star](https://github.com/OYsun/VueStar) | vue-star-plus |
+| -------------- | -------------------------------------------- | ------------- |
+| Icon           | ✅                                            | ✅             |
+| Animation      | ✅                                            | ✅             |
+| Image          | ❌                                            | ✅             |
+| Default Active | ❌                                            | ✅             |
 
-[DEMO](https://savoygu.github.io/vue-star-plus/)
-
-| 功能 | vue-star | vue-star-plus  |
-| --- | --- | --- |
-| 图标 | ✅ | ✅ |
-| 动画 | ✅ | ✅ |
-| 默认激活 | ❌ | ✅ |
-| 图片 | ❌ | ✅ |
-
-## 安装
+## Install
 
 ### Vue3
 
+```bash
+npm install vue-star-plus
+```
+
 ```javascript
-npm i vue-star-plus --save
+import { createApp } from 'vue'
+import VueStarPlus from 'vue-star-plus'
+import 'vue-star-plus/style.css'
+const app = createApp()
+// Global register
+app.component('VueStarPlus', VueStarPlus)
 ```
 
 ### Vue2
 
-```javascript
-npm i vue-star-plus@2 --save
+```bash
+npm install vue-star-plus@2
 ```
 
-## 使用方式
-
-### Vue3 / Vue2
-
 ```javascript
-import VueStarPlus from 'vue-star-plus'
-import 'vue-star-plus/style.css'
+import Vue from 'vue'
+import VueStarPlus from 'vue-star-plus' // same with vue3 version
+import 'vue-star-plus/style.css'  // same with vue3 version
+// Global register
 Vue.component('VueStarPlus', VueStarPlus)
 ```
+
+## Usage
+
+[DEMO](https://savoygu.github.io/vue-star-plus/)
+
+## License
+
+The vue-star-plus package is also open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
