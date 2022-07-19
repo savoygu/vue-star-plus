@@ -3,11 +3,21 @@
   "private": true,
   "description": "Plus version of vue-star component",
   "author": "savoygu",
+  "watch": {
+    "build_pkg": {
+      "patterns": [
+        "packages/vue-star-plus/src"
+      ],
+      "extensions": "ts,vue,scss"
+    }
+  },
   "scripts": {
     "app:build": "pnpm --filter 'vue-star-plus' build",
     "docs:build": "pnpm --filter 'docs' build",
     "predeploy": "pnpm docs:build",
-    "deploy": "gh-pages -d packages/docs/dist"
+    "deploy": "gh-pages -d packages/docs/dist",
+    "build_pkg": "npm run app:build",
+    "watch_pkg": "npm-watch build_pkg"
   },
   "repository": {
     "type": "git",
@@ -22,6 +32,7 @@
     "url": "https://github.com/savoygu/vue-star-plus/issues"
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^4.0.0",
+    "npm-watch": "^0.11.0"
   }
 }
