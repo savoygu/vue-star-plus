@@ -41,7 +41,7 @@ jobs:
         id: version
         uses: ashley-taylor/read-json-property-action@v1.0
         with:
-          path: ./packages/app/package.json
+          path: ./packages/vue-star-plus/package.json
           property: version
       - name: Release
         uses: softprops/action-gh-release@v1
