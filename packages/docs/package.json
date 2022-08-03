@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "vue": "^3.2.25",
-    "vue-star-plus": "workspace:^3.0.2"
+    "vue-star-plus": "workspace:^3.0.3"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.3",
