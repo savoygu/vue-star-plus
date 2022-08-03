@@ -20,7 +20,7 @@ importers:
       vite-plugin-md: ^0.13.1
       vite-plugin-md-preview: ^0.0.5
       vue: ^3.2.25
-      vue-star-plus: workspace:^3.0.2
+      vue-star-plus: workspace:^3.0.3
       vue-tsc: ^0.34.7
     dependencies:
       vue: 3.2.36
