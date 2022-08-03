@@ -1,7 +1,7 @@
 import { resolve as _resolve } from 'path'
-import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 
 const resolve = (...dirs) => _resolve(__dirname, ...dirs)
@@ -12,7 +12,7 @@ export default defineConfig({
       scss: {
         additionalData: `@import "sass-bem-next/_bem.scss";`
       }
-    },
+    }
   },
   build: {
     lib: {
@@ -29,7 +29,11 @@ export default defineConfig({
       }
     }
   },
-  plugins: [vue(), vueJsx(), dts({
-    outputDir: resolve(__dirname, 'types')
-  })]
+  plugins: [
+    vue(),
+    vueJsx(),
+    dts({
+      outputDir: resolve(__dirname, 'types')
+    })
+  ]
 })
