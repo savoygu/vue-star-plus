@@ -1,10 +1,10 @@
 {
-  "name": "monorepo",
+  "name": "@vue-star-plus/monorepo",
   "private": true,
   "description": "Plus version of vue-star component",
   "author": "savoygu",
   "watch": {
-    "build_pkg": {
+    "run_build": {
       "patterns": [
         "packages/vue-star-plus/src"
       ],
@@ -12,12 +12,13 @@
     }
   },
   "scripts": {
-    "app:build": "pnpm --filter 'vue-star-plus' build",
+    "watch": "npm-watch run_build",
+    "build": "pnpm --filter 'vue-star-plus' build",
+    "run_build": "npm run build",
+    "docs:dev": "pnpm --filter 'docs' dev",
     "docs:build": "pnpm --filter 'docs' build",
     "predeploy": "pnpm docs:build",
-    "deploy": "gh-pages -d packages/docs/dist",
-    "build_pkg": "npm run app:build",
-    "watch_pkg": "npm-watch build_pkg"
+    "deploy": "gh-pages -d packages/docs/dist"
   },
   "repository": {
     "type": "git",
