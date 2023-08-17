@@ -1,7 +1,3 @@
 {
-  "extends": [
-    "@savoygu/eslint-config-vue",
-    "@savoygu/eslint-config/plugins/jsonc",
-    "@savoygu/eslint-config-prettier"
-  ]
+  "extends": "@antfu"
 }
