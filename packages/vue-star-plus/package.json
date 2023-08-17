@@ -18,8 +18,8 @@
   ],
   "exports": {
     ".": {
-      "require": "./dist/vue-star-plus.umd.js",
-      "import": "./dist/vue-star-plus.es.js"
+      "require": "./dist/index.umd.js",
+      "import": "./dist/index.es.js"
     },
     "./style.css": {
       "require": "./dist/style.css",
@@ -30,13 +30,13 @@
       "import": "./package.json"
     }
   },
-  "main": "./dist/vue-star-plus.umd.js",
-  "module": "./dist/vue-star-plus.es.js",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
   "files": [
     "dist",
     "types"
   ],
-  "typings": "./types/main.d.ts",
+  "typings": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",

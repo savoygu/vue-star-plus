@@ -16,9 +16,9 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: resolve('src/main.ts'),
+      entry: resolve('src/index.ts'),
       name: 'VueStarPlus',
-      fileName: (format) => `vue-star-plus.${format}.js`
+      fileName: (format) => `index.${format}.js`
     },
     rollupOptions: {
       external: ['vue'],
@@ -29,11 +29,5 @@ export default defineConfig({
       }
     }
   },
-  plugins: [
-    vue(),
-    vueJsx(),
-    dts({
-      outputDir: resolve(__dirname, 'types')
-    })
-  ]
+  plugins: [vue(), vueJsx(), dts()]
 })

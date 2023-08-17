@@ -1,5 +1,5 @@
 <script lang="ts">
-import { computed, defineComponent, ref, watch } from 'vue'
+import { computed, defineComponent } from 'vue'
 
 const hexColors = /^#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$/
 const rgbColors =
@@ -21,35 +21,23 @@ export default defineComponent({
   },
   emits: ['update:modelValue'],
   setup(props, { emit }) {
-    const isActive = ref(props.modelValue)
-
-    watch(
-      () => props.modelValue,
-      (newVal) => {
-        if (isActive.value !== newVal) {
-          isActive.value = newVal
-        }
-      }
-    )
-
-    const handleToggle = () => {
-      emit('update:modelValue', !isActive.value)
-    }
-
     const iconClass = computed(() => {
-      return isActive.value ? props.animate : ''
+      return props.modelValue ? props.animate : ''
     })
 
     const iconStyle = computed(() => {
       return {
-        color: isActive.value ? props.color : ''
+        color: props.modelValue ? props.color : ''
       }
     })
+
+    const handleToggle = () => {
+      emit('update:modelValue', !props.modelValue)
+    }
 
     return {
       iconClass,
       iconStyle,
-      isActive,
       handleToggle
     }
   }
@@ -69,7 +57,7 @@ export default defineComponent({
       <div
         :class="[
           'vue-star-plus__decoration',
-          { 'vue-star-plus__decoration--active': isActive }
+          { 'vue-star-plus__decoration--active': modelValue }
         ]"
       ></div>
     </div>
