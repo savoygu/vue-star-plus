@@ -31,7 +31,7 @@ jobs:
       - name: Build
         run: |
           pnpm install
-          pnpm app:build
+          pnpm build
       - name: publish
         run: |
           pnpm publish -r --access public
