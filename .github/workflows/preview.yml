@@ -31,7 +31,7 @@ jobs:
       - name: Build
         run: |
           pnpm install
-          pnpm app:build
+          pnpm build
           pnpm docs:build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
