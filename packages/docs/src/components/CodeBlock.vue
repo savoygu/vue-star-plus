@@ -20,8 +20,8 @@ defineProps({
   flex-direction: column;
   height: 200px;
   padding: 30px 0;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border-right: 1px solid var(--mdp-border-color);
+  border-bottom: 1px solid var(--mdp-border-color);
   box-sizing: border-box;
 
   @include p('&:nth-child(3n)', '&:last-child') {

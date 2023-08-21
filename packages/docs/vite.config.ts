@@ -1,8 +1,8 @@
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import shiki from 'markdown-it-shiki'
-import md from 'vite-plugin-md'
-import mdPreview, { transformer } from 'vite-plugin-md-preview'
+import Markdown from 'vite-plugin-vue-markdown'
+import MarkdownPreview from 'vite-plugin-markdown-preview'
 
 
 export default defineConfig(({ mode }) => {
@@ -21,15 +21,14 @@ export default defineConfig(({ mode }) => {
       vue({
         include: [/\.vue$/, /\.md$/]
       }),
-      md({
-        transforms: {
-          before: transformer
-        },
+      Markdown({
         markdownItSetup(md) {
-          md.use(shiki, { theme: 'github-light' })
+          md.use(shiki, {
+            theme: 'github-dark'
+          })
         }
       }),
-      mdPreview()
+      MarkdownPreview()
     ],
   }
 })

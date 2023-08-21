@@ -98,60 +98,15 @@ function getImageUrl(name) {
 <script setup>
 import { ref } from 'vue'
 const stars = ref([
-  {
-    animated: 'tada',
-    font: 'bell',
-    color: 'rgb(215, 139, 255)',
-    active: false,
-  },
-  {
-    animated: 'zoomInDown',
-    font: 'heart',
-    color: 'rgb(240, 86, 84)',
-    active: false,
-  },
-  {
-    animated: 'rubberBand',
-    font: 'bomb',
-    color: 'rgb(125, 94, 63)',
-    active: false,
-  },
-  {
-    animated: 'swing',
-    font: 'wrench',
-    color: 'rgb(50, 50, 50)',
-    active: false,
-  },
-  {
-    animated: 'rotateIn',
-    font: 'thumbs-up',
-    color: 'rgb(152, 138, 222)',
-    active: false,
-  },
-  {
-    animated: 'wobble',
-    font: 'weixin',
-    color: 'rgb(254, 163, 134)',
-    active: false,
-  },
-  {
-    animated: 'rollIn',
-    font: 'apple',
-    color: 'rgb(253, 145, 145)',
-    active: false,
-  },
-  {
-    animated: 'bounceInUp',
-    font: 'android',
-    color: 'rgb(42, 175, 116)',
-    active: false,
-  },
-  {
-    animated: 'jello',
-    font: 'linux',
-    color: 'rgb(125, 94, 63)',
-    active: false,
-  }
+  { animated: 'tada', font: 'bell', color: 'rgb(215, 139, 255)', active: false, },
+  { animated: 'zoomInDown', font: 'heart', color: 'rgb(240, 86, 84)', active: false, },
+  { animated: 'rubberBand', font: 'bomb', color: 'rgb(125, 94, 63)', active: false, },
+  { animated: 'swing', font: 'wrench', color: 'rgb(50, 50, 50)', active: false, },
+  { animated: 'rotateIn', font: 'thumbs-up', color: 'rgb(152, 138, 222)', active: false, },
+  { animated: 'wobble', font: 'weixin', color: 'rgb(254, 163, 134)', active: false, },
+  { animated: 'rollIn', font: 'apple', color: 'rgb(253, 145, 145)', active: false, },
+  { animated: 'bounceInUp', font: 'android', color: 'rgb(42, 175, 116)', active: false, },
+  { animated: 'jello', font: 'linux', color: 'rgb(125, 94, 63)', active: false, }
 ])
 </script>
 ```
