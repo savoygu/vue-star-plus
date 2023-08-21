@@ -48,10 +48,9 @@ jobs:
           property: version
       - name: Release
         uses: softprops/action-gh-release@v1
-        env:
-          GITHUB_TOKEN: ${{secrets.ACCESS_TOKEN}}
         with:
           tag_name: v${{steps.version.outputs.value}}
           body: body_v${{steps.version.outputs.value}}
+          token: ${{secrets.ACCESS_TOKEN}}
           draft: false
           prerelease: false
