@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import VueStarPlusDoc from './markdowns/VueStarPlus.docs.md'
+import VueStarPlusDoc from './components/VueStarPlus.md'
 import pkg from 'vue-star-plus/package.json'
 </script>
 
