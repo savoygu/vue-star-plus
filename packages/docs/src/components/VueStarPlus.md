@@ -5,12 +5,12 @@
   <div class="code-wrapper">
     <CodeBlock desc="指定激活颜色">
       <VueStarPlus v-model="active" color="#ff0000">
-        <template v-slot:icon>{{ active ? '❤' : '❤' }}</template>
+        <template #icon>❤</template>
       </VueStarPlus>
     </CodeBlock>
     <CodeBlock desc="指定默认和激活颜色">
       <VueStarPlus v-model="active2" :color="active2 ? 'rgb(247,186,42)' : '#bfcbd9'">
-        <template v-slot:icon>{{ active2 ? '❤' : '❤' }}{{count}}</template>
+        <template #icon>❤{{count}}</template>
       </VueStarPlus>
     </CodeBlock>
   </div>
@@ -36,12 +36,12 @@ watch(active2, (newVal) => {
   <div class="code-wrapper">
     <CodeBlock desc="切换点赞图片">
       <VueStarPlus v-model="active" color="#ff0000">
-        <template v-slot:icon><img :src="image"></template>
+        <template #icon><img :src="image"></template>
       </VueStarPlus>
     </CodeBlock>
     <CodeBlock desc="切换点赞背景">
       <VueStarPlus v-model="active2">
-        <template v-slot:icon>
+        <template #icon>
           <span class="vsp-bg" :class="active2 ? 'is-active' : ''"></span>
         </template>
       </VueStarPlus>
@@ -87,7 +87,7 @@ function getImageUrl(name) {
   <div class="code-wrapper">
     <CodeBlock class="code-block-third" :desc="`fa-${item.font} 和 ${item.animated}`" v-for="item in stars" :key="item.font">
       <VueStarPlus v-model="item.active" :color="item.color" :animate="`animated ${item.animated}`">
-        <template v-slot:icon>
+        <template #icon>
           <i :class="['fa', 'fa-2x', 'fa-' + item.font]"></i>
         </template>
       </VueStarPlus>
