@@ -51,6 +51,5 @@ jobs:
         with:
           tag_name: v${{steps.version.outputs.value}}
           body: body_v${{steps.version.outputs.value}}
-          token: ${{secrets.ACCESS_TOKEN}}
           draft: false
           prerelease: false
