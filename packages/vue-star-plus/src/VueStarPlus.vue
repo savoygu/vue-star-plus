@@ -18,6 +18,11 @@ export default defineComponent({
       type: String,
       validator: isColor,
     },
+    type: {
+      type: String,
+      default: 'fill',
+      validator: (value: string) => ['fill', 'center'].includes(value),
+    },
   },
   emits: ['update:modelValue'],
   setup(props, { emit }) {
@@ -56,6 +61,7 @@ export default defineComponent({
       </div>
       <div
         class="vue-star-plus__decoration" :class="[
+          `vue-star-plus__decoration--${type}`,
           { 'vue-star-plus__decoration--active': modelValue },
         ]"
       />

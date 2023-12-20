@@ -21,10 +21,6 @@
 
   @include e(decoration) {
     position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
     width: 100px;
     height: 100px;
 
@@ -36,6 +32,19 @@
     @include m(active) {
       background-position: -2500px 0;
       transition-duration: 1s;
+    }
+
+    @include m(fill) {
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    @include m(center) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }
